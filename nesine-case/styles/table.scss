@@ -1,0 +1,173 @@
+.bTable{
+    display: flex;
+    flex-direction: column;
+    -webkit-box-shadow: 0 0 8px 4px rgb(28 60 139 / 14%);
+    -moz-box-shadow: 0 0 8px 4px rgba(28,60,139,.14);
+    box-shadow: 0 0 8px 4px rgb(28 60 139 / 14%);
+    border-radius: 12px;
+    margin: 30px 0;
+    min-width: 351px;
+    &-head{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: lightblue;
+        border: 1px solid #eee;
+        padding: 15px 5px;
+        border: none;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        background-color: #5b5f7b;
+        font-weight: 600;
+        @media screen and(max-width:767px) {
+            flex-wrap: wrap;
+        }
+        .item{
+            width: 3%;
+            color: #fff;
+            text-align: center;
+            &:last-child{
+                border-right: 0;
+                padding-right: 0;
+            }
+            &.item1{
+                width: 23%;
+                text-align: left;
+                @media screen and(max-width:1199px) {
+                    width: 19%;
+                }
+            }
+            &.item2{
+                width: 7%;
+            }
+            @media screen and(max-width:1399px) {
+                width: 4%;
+                font-size: 14px;
+                line-height: 14px;
+            }
+            @media screen and(max-width:991px) {
+                width: 5%;
+                &.item2,&.item3{
+                    display: none;
+                }
+            }
+            @media screen and(max-width:767px) {
+                width: 12%;
+                &.item1{
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+                &.item6,&.item9,&.item10,&.item11,&.item12,&.item13,&.item17,&.item18,&.item19{
+                    display: none;
+                }
+            }
+        }
+    }
+    &-body{
+        display: flex;
+        flex-direction: column;
+        .item{
+            width: 3%;
+            padding:0;
+            text-align: center;
+            button{
+                background: transparent;
+                border: 0;
+            }
+            &:last-child{
+                border-right: 0;
+                padding-right: 0;
+            }
+            &.item1{
+                width: 24%;
+                text-align: left;
+                @media screen and(max-width:1199px) {
+                    width: 19%;
+                }
+            }
+            &.item2{
+                width: 7%;
+            }
+            @media screen and(max-width:1399px) {
+                width: 4%;
+                font-size: 14px;
+                line-height: 14px;
+                span{
+                    font-size: 14px;
+                    line-height: 14px;
+                }
+            }
+            @media screen and(max-width:991px) {
+                width: 5%;
+                &.item2,&.item3{
+                    display: none;
+                }
+            }
+            @media screen and(max-width:767px) {
+                width: 12%;
+                &.item1{
+                    width: 100%;
+                }
+                &.item6,&.item9,&.item10,&.item11,&.item12,&.item13,&.item17,&.item18,&.item19{
+                    display: none;
+                }
+            }
+        }
+        &-second{
+            .item{
+                cursor: pointer;
+                &:hover{
+                    background: rgba(255,255,0,.4);
+                }
+                &.selected{
+                    background: yellow;
+                }
+                &.item1,&.item2,&.item3{
+                    cursor: text;
+                    &:hover{
+                        background: transparent;
+                    }   
+                }
+            }
+        }
+        &-first,&-second{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #eee;
+            border-top:0;
+            transition: background-color .4s;
+            padding: 0 5px;
+            @media screen and(max-width:767px) {
+                flex-wrap: wrap;
+            }
+            &:hover{
+                background-color: #e8e8e8 !important;
+            }
+            .item{
+                padding: 15px 0;
+                span{
+                    margin-right: 5px;
+                    &.id{
+                        color: #0aae8b;
+                        font-weight: 600;
+                    }
+                    &.date,&.day,&.leauge{
+                        color: #ce3c3c;
+                        font-weight: 600;
+                    }
+                    &.leauge,&.team{
+                        @media screen and(max-width:1199px) {
+                            display: block;
+                            margin-top: 5px;
+                        }
+                        @media screen and(max-width:767px) {
+                            display: inline-block;
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

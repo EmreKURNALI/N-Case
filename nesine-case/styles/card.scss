@@ -1,0 +1,46 @@
+.card{
+    position: fixed;
+    bottom: 2px;
+    right: 2px;
+    width: 350px;
+    min-height: 50px;
+    max-height: 260px;
+    border: 2px solid #5b5f7b;
+    overflow-y: scroll;
+    @media screen and(max-width:767px) {
+        width: 250px;
+    }
+
+    &-item{
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        border-bottom: 2px solid #5b5f7b;
+        >div{
+            margin-bottom: 10px;
+            margin-right: 10px;
+            &:nth-child(4),&:last-child{
+                margin-bottom: 0;
+            }
+        }
+        @media screen and(max-width:767px) {
+            padding: 10px;
+            >div{
+                font-size: 14px;
+                line-height: 14px;
+            }
+        }
+    }
+    &-total{
+        height: 50px;
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        padding: 10px 20px;
+        @media screen and(max-width:767px) {
+            padding: 10px;
+            font-size: 14px;
+            line-height: 14px;
+        }
+    }
+}
